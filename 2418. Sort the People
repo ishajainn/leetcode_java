@@ -1,0 +1,16 @@
+class Solution {
+    public String[] sortPeople(String[] names, int[] heights) {
+        List<Integer> list = new ArrayList<Integer>();
+        for(int ele:heights){
+            list.add(ele);
+        }
+         Collections.sort(list, Collections.reverseOrder());
+        System.out.println(list);
+        String arr[]=new String[names.length];
+        for(int i=0;i<heights.length;i++){
+            int c=list.indexOf(heights[i]);
+            arr[c]=names[i];
+        }
+        return arr;
+    }
+}
