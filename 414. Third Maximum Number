@@ -1,0 +1,22 @@
+class Solution {
+    public int thirdMax(int[] nums) {
+       HashSet<Integer> set = new HashSet<>();
+       for(int ele:nums){
+           set.add(ele);
+       }
+       int arr[]=new int[set.size()];
+       int c=0;
+       for(int ele:set){
+           arr[c]=ele;
+           c++;
+       }
+       Arrays.sort(arr);
+       if(arr.length<=2){
+           return arr[arr.length-1];
+       }
+       else{
+           return arr[arr.length-3];
+       }
+
+    }
+}
