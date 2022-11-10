@@ -1,0 +1,15 @@
+class Solution {
+    public int sumOfUnique(int[] nums) {
+     List<Integer> lst=new ArrayList<Integer>();
+     for(int ele:nums){
+         lst.add(ele);
+     }
+     int sum=0;
+     for(int ele:lst){
+         if(Collections.frequency(lst,ele)==1)
+         sum+=ele;
+     } 
+     return sum;  
+    }
+    
+}
