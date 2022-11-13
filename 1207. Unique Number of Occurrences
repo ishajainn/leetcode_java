@@ -1,0 +1,30 @@
+class Solution {
+    public boolean uniqueOccurrences(int[] arr) {
+        ArrayList<Integer> lst=new ArrayList<>();
+        for(int ele:arr){
+            lst.add(ele);
+        }
+        ArrayList<Integer> lst1=new ArrayList<>();
+        ArrayList<Integer> lst2=new ArrayList<>();
+        HashSet<Integer> lst3=new HashSet<>();
+        for(int ele:lst){
+            if(!lst2.contains(ele)){
+            lst1.add(Collections.frequency(lst,ele));
+            lst2.add(ele);}
+        }
+        System.out.println(lst);
+        System.out.println(lst1);
+        System.out.println(lst2);
+        for(int ele:lst1){
+            lst3.add(ele);
+        }
+        System.out.println(lst2);
+        
+        if(lst2.size()!=lst3.size()){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+}
