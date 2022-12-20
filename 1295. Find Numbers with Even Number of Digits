@@ -1,0 +1,21 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        int count=0;
+        for(int ele:nums){
+            if(even(ele)){
+                count++;
+        }}
+        return count;
+    }
+    static boolean even(int ele){
+        int c=0;
+        while(ele>0){
+            c++;
+            ele/=10;
+        }
+        if(c%2==0)
+            return true;
+        else
+            return false;
+    }
+}
